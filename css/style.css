@@ -235,6 +235,7 @@ ul { list-style: none; }
 .card-icon {
   font-size: 2.5rem;
   margin-bottom: 1rem;
+  color: var(--primary);
 }
 
 .card h3 {
@@ -247,14 +248,10 @@ ul { list-style: none; }
 
 /* ===== Image placeholder ===== */
 .img-placeholder {
-  background: linear-gradient(135deg, var(--primary-light), #bee3f8);
   border-radius: var(--radius);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 3rem;
-  color: var(--primary);
   min-height: 220px;
+  object-fit: cover;
+  width: 100%;
 }
 
 /* ===== Stats Bar ===== */
@@ -427,7 +424,7 @@ ul { list-style: none; }
   border-radius: 50%;
   margin: 0 auto 1rem;
   min-height: auto;
-  font-size: 2rem;
+  object-fit: cover;
 }
 
 .team-member h3 { font-size: 1.1rem; color: var(--primary-dark); }
