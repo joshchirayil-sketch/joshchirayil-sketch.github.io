@@ -20,8 +20,8 @@
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="programs.html">Programs</a>
-        <a href="stories.html">Stories</a>
         <a href="contact.html" class="active">Contact</a>
+        <a href="intake.html" class="btn-nav-secondary">Apply Online</a>
         <a href="donate.html" class="btn-nav">Donate</a>
       </div>
     </nav>
@@ -29,11 +29,40 @@
 
   <section class="page-header">
     <h1>Contact Us</h1>
-    <p>Questions, applications, partnerships, we'd love to hear from you</p>
+    <p>Questions, partnerships, or just want to say hello — we'd love to hear from you</p>
+  </section>
+
+  <!-- Locations -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Our Locations</h2>
+        <p>Visit us at either of our Michigan offices</p>
+      </div>
+      <div class="locations-grid">
+        <div class="location-card">
+          <div class="location-icon"><i class="fa-solid fa-location-dot"></i></div>
+          <h3>Troy Office</h3>
+          <p>3150 Livernois, Suite 165</p>
+          <p>Troy, MI 48083</p>
+          <p class="location-phone"><i class="fa-solid fa-phone"></i> (248) 707-0136</p>
+          <p style="color:var(--text-light); font-size:0.9rem; margin-top:0.5rem;">Monday–Friday, 9am–5pm ET</p>
+        </div>
+        <div class="location-card">
+          <!-- TODO: Replace with actual second location details -->
+          <div class="location-icon"><i class="fa-solid fa-location-dot"></i></div>
+          <h3>[Second Location Name]</h3>
+          <p>[Street Address]</p>
+          <p>[City, MI ZIP]</p>
+          <p class="location-phone"><i class="fa-solid fa-phone"></i> [Phone Number]</p>
+          <p style="color:var(--text-light); font-size:0.9rem; margin-top:0.5rem;">[Hours]</p>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- Contact Info + Form -->
-  <section class="section">
+  <section class="section section-alt">
     <div class="container">
       <div class="two-col">
         <div>
@@ -42,19 +71,6 @@
           <div style="margin-bottom:1.5rem;">
             <h3 style="font-size:1rem; margin-bottom:0.3rem;"><i class="fa-solid fa-envelope"></i> Email</h3>
             <p><a href="mailto:info@pedalsofhope.org">info@pedalsofhope.org</a></p>
-          </div>
-
-          <div style="margin-bottom:1.5rem;">
-            <h3 style="font-size:1rem; margin-bottom:0.3rem;"><i class="fa-solid fa-phone"></i> Phone</h3>
-            <p>(248) 707-0136</p>
-            <p style="color:var(--text-light); font-size:0.9rem;">Monday–Friday, 9am–5pm ET</p>
-          </div>
-
-          <div style="margin-bottom:1.5rem;">
-            <h3 style="font-size:1rem; margin-bottom:0.3rem;"><i class="fa-solid fa-location-dot"></i> Mailing Address</h3>
-            <p>Pedals of Hope<br>
-            3150 Livernois, Suite 165<br>
-            Troy, MI 48083</p>
           </div>
 
           <div style="margin-bottom:1.5rem;">
@@ -67,6 +83,11 @@
           </div>
 
           <div style="background:var(--primary-light); padding:1.2rem; border-radius:var(--radius); margin-top:1rem;">
+            <h3 style="font-size:1rem; color:var(--primary-dark); margin-bottom:0.3rem;"><i class="fa-solid fa-clipboard-list"></i> Looking to Apply?</h3>
+            <p style="font-size:0.95rem;">Use our <a href="intake.html"><strong>online registration form</strong></a> to submit your intake paperwork directly. It's faster and goes straight to our team.</p>
+          </div>
+
+          <div style="background:var(--primary-light); padding:1.2rem; border-radius:var(--radius); margin-top:1rem;">
             <h3 style="font-size:1rem; color:var(--primary-dark); margin-bottom:0.3rem;"><i class="fa-solid fa-hospital"></i> For Therapists & Professionals</h3>
             <p style="font-size:0.95rem;">Referring a patient? You can apply on their behalf (with family consent) or email us at <a href="mailto:referrals@pedalsofhope.org">referrals@pedalsofhope.org</a> for the professional referral form.</p>
           </div>
@@ -75,24 +96,29 @@
         <!-- Contact Form -->
         <div class="form-card" style="margin:0;">
           <h2 style="font-size:1.4rem; color:var(--primary-dark); margin-bottom:1.5rem;">Send Us a Message</h2>
-          <form action="#" method="post">
+          <form action="https://formsubmit.co/info@pedalsofhope.org" method="POST">
+            <input type="hidden" name="_subject" value="Website Contact - Pedals of Hope">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_next" value="https://joshchirayil-sketch.github.io/contact.html">
+            <input type="hidden" name="_captcha" value="true">
+            <input type="text" name="_honey" style="display:none">
+
             <div class="form-group">
               <label>Your Name *</label>
-              <input type="text" placeholder="Jane Doe" required>
+              <input type="text" name="name" placeholder="Jane Doe" required>
             </div>
             <div class="form-group">
               <label>Email *</label>
-              <input type="email" placeholder="jane@example.com" required>
+              <input type="email" name="email" placeholder="jane@example.com" required>
             </div>
             <div class="form-group">
               <label>Phone (optional)</label>
-              <input type="tel" placeholder="(248) 707-0136">
+              <input type="tel" name="phone" placeholder="(248) 707-0136">
             </div>
             <div class="form-group">
               <label>I'm interested in... *</label>
-              <select required>
+              <select name="interest" required>
                 <option value="">Select one</option>
-                <option>Applying for a bike for my child</option>
                 <option>Making a donation</option>
                 <option>Volunteering</option>
                 <option>Corporate partnership</option>
@@ -104,7 +130,7 @@
             </div>
             <div class="form-group">
               <label>Message *</label>
-              <textarea placeholder="Tell us how we can help..." required></textarea>
+              <textarea name="message" placeholder="Tell us how we can help..." required></textarea>
             </div>
             <button type="submit" class="btn btn-primary" style="width:100%; text-align:center;">Send Message</button>
           </form>
@@ -114,7 +140,7 @@
   </section>
 
   <!-- Volunteer -->
-  <section class="section section-alt">
+  <section class="section">
     <div class="container">
       <div class="section-header">
         <h2>Volunteer With Us</h2>
@@ -127,12 +153,12 @@
           <p>Help our team assemble and prepare adaptive bikes for delivery. Training provided. Mechanical experience a plus but not required.</p>
         </div>
         <div class="card">
-          <div class="card-icon"><i class="fa-solid fa-camera"></i></div>
+          <div class="card-icon blue"><i class="fa-solid fa-camera"></i></div>
           <h3>Ride Day Photography</h3>
           <p>Capture the moment a child rides for the first time. We need photographers for delivery events and community rides.</p>
         </div>
         <div class="card">
-          <div class="card-icon"><i class="fa-solid fa-bullhorn"></i></div>
+          <div class="card-icon sky"><i class="fa-solid fa-bullhorn"></i></div>
           <h3>Community Outreach</h3>
           <p>Spread the word at schools, therapy centers, and community events. Help us reach families who don't know we exist.</p>
         </div>
@@ -150,7 +176,7 @@
   </section>
 
   <!-- Partners -->
-  <section class="section">
+  <section class="section section-alt">
     <div class="container">
       <div style="max-width:700px; margin:0 auto;">
         <h2 style="font-size:1.6rem; color:var(--primary-dark); margin-bottom:1rem; text-align:center;">Partner With Us</h2>
@@ -176,8 +202,9 @@
       </div>
       <div>
         <h4>Programs</h4>
-        <a href="programs.html">Apply for a Bike</a>
+        <a href="programs.html">Our Programs</a>
         <a href="programs.html#eligibility">Eligibility</a>
+        <a href="intake.html">Apply Online</a>
         <a href="programs.html#faq">FAQ</a>
       </div>
       <div>
@@ -212,7 +239,7 @@
         if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
       });
     }, { threshold: 0.1 });
-    document.querySelectorAll('.section, .cta-banner, .card').forEach(el => {
+    document.querySelectorAll('.section, .cta-banner, .card, .location-card').forEach(el => {
       el.classList.add('animate-on-scroll'); observer.observe(el);
     });
   </script>

@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apply Online - Pedals of Hope</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav-container">
+      <a href="index.html" class="logo"><span><i class="fa-solid fa-bicycle"></i></span> Pedals of Hope</a>
+      <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">☰</button>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="programs.html">Programs</a>
+        <a href="contact.html">Contact</a>
+        <a href="intake.html" class="btn-nav-secondary active">Apply Online</a>
+        <a href="donate.html" class="btn-nav">Donate</a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="page-header">
+    <h1>Online Registration</h1>
+    <p>Complete your intake paperwork online — it takes about 15 minutes</p>
+  </section>
+
+  <!-- Intro -->
+  <section class="section">
+    <div class="container">
+      <div style="max-width:700px; margin:0 auto; text-align:center; margin-bottom:2rem;">
+        <p style="margin-bottom:1rem;">Please fill out the form below to apply for an adaptive bike through Pedals of Hope. All information is kept confidential and used only to evaluate your application.</p>
+        <p style="color:var(--text-light); font-size:0.95rem;"><i class="fa-solid fa-clock" style="color:var(--primary);"></i> A parent, guardian, or therapist may complete this form on behalf of the child. Fields marked with <strong>*</strong> are required.</p>
+      </div>
+
+      <!-- Intake Form -->
+      <div class="form-card wide">
+        <form action="https://formsubmit.co/info@pedalsofhope.org" method="POST">
+          <!-- FormSubmit config -->
+          <input type="hidden" name="_subject" value="New Intake Application - Pedals of Hope">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_next" value="https://joshchirayil-sketch.github.io/thanks.html">
+          <input type="hidden" name="_captcha" value="true">
+          <input type="text" name="_honey" style="display:none">
+
+          <!-- ===== CHILD INFORMATION ===== -->
+          <div class="form-section-title">
+            <i class="fa-solid fa-child"></i> Child Information
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label>Child's First Name *</label>
+              <input type="text" name="child_first_name" placeholder="First name" required>
+            </div>
+            <div class="form-group">
+              <label>Child's Last Name *</label>
+              <input type="text" name="child_last_name" placeholder="Last name" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label>Date of Birth *</label>
+              <input type="date" name="child_dob" required>
+            </div>
+            <div class="form-group">
+              <label>Gender</label>
+              <select name="child_gender">
+                <option value="">Select</option>
+                <option>Male</option>
+                <option>Female</option>
+                <option>Non-binary</option>
+                <option>Prefer not to say</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label>Height (inches) *</label>
+              <input type="text" name="child_height" placeholder='e.g. 48"' required>
+            </div>
+            <div class="form-group">
+              <label>Weight (lbs) *</label>
+              <input type="text" name="child_weight" placeholder="e.g. 65 lbs" required>
+            </div>
+          </div>
+
+          <!-- ===== PARENT / GUARDIAN ===== -->
+          <div class="form-section-title">
+            <i class="fa-solid fa-user"></i> Parent / Guardian Information
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label>Parent/Guardian Full Name *</label>
+              <input type="text" name="parent_name" placeholder="Full name" required>
+            </div>
+            <div class="form-group">
+              <label>Relationship to Child *</label>
+              <select name="parent_relationship" required>
+                <option value="">Select</option>
+                <option>Parent</option>
+                <option>Legal Guardian</option>
+                <option>Grandparent</option>
+                <option>Foster Parent</option>
+                <option>Other</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label>Email *</label>
+              <input type="email" name="parent_email" placeholder="you@example.com" required>
+            </div>
+            <div class="form-group">
+              <label>Phone *</label>
+              <input type="tel" name="parent_phone" placeholder="(248) 555-1234" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Street Address *</label>
+            <input type="text" name="address_street" placeholder="123 Main Street" required>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label>City *</label>
+              <input type="text" name="address_city" placeholder="City" required>
+            </div>
+            <div class="form-group">
+              <label>State *</label>
+              <input type="text" name="address_state" placeholder="MI" required>
+            </div>
+          </div>
+
+          <div class="form-group" style="max-width:200px;">
+            <label>ZIP Code *</label>
+            <input type="text" name="address_zip" placeholder="48083" required>
+          </div>
+
+          <!-- ===== MEDICAL / DIAGNOSIS ===== -->
+          <div class="form-section-title">
+            <i class="fa-solid fa-notes-medical"></i> Medical Information
+          </div>
+
+          <div class="form-group">
+            <label>Primary Diagnosis / Condition *</label>
+            <input type="text" name="primary_diagnosis" placeholder="e.g. Cerebral palsy, Spina bifida, Muscular dystrophy" required>
+          </div>
+
+          <div class="form-group">
+            <label>Secondary Conditions (if any)</label>
+            <input type="text" name="secondary_conditions" placeholder="Any additional diagnoses">
+          </div>
+
+          <div class="form-group">
+            <label>Brief Description of Mobility Challenges *</label>
+            <textarea name="mobility_challenges" placeholder="Describe how your child's condition affects their mobility, balance, and ability to use a standard bike." required></textarea>
+          </div>
+
+          <div class="form-group">
+            <label>Current Mobility Aids Used</label>
+            <input type="text" name="mobility_aids" placeholder="e.g. Wheelchair, walker, crutches, AFOs, none">
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label>Can the child pedal with their feet? *</label>
+              <select name="can_pedal_feet" required>
+                <option value="">Select</option>
+                <option>Yes</option>
+                <option>Limited / with assistance</option>
+                <option>No</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Can the child steer / use hand brakes? *</label>
+              <select name="can_steer_hands" required>
+                <option value="">Select</option>
+                <option>Yes</option>
+                <option>Limited / with assistance</option>
+                <option>No</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Does the child need trunk / lateral support? *</label>
+            <select name="needs_trunk_support" required>
+              <option value="">Select</option>
+              <option>Yes - full support needed</option>
+              <option>Yes - some support needed</option>
+              <option>No</option>
+              <option>Unsure</option>
+            </select>
+          </div>
+
+          <!-- ===== REFERRING PROVIDER ===== -->
+          <div class="form-section-title">
+            <i class="fa-solid fa-user-doctor"></i> Referring Provider
+          </div>
+          <p class="form-note" style="margin-bottom:1rem;">A letter of medical necessity from a therapist or physician is required. You can upload or email it separately to <a href="mailto:referrals@pedalsofhope.org">referrals@pedalsofhope.org</a>.</p>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label>Provider Name *</label>
+              <input type="text" name="provider_name" placeholder="Dr. / Therapist name" required>
+            </div>
+            <div class="form-group">
+              <label>Provider Type *</label>
+              <select name="provider_type" required>
+                <option value="">Select</option>
+                <option>Physical Therapist (PT)</option>
+                <option>Occupational Therapist (OT)</option>
+                <option>Physician / Pediatrician</option>
+                <option>Physiatrist</option>
+                <option>Other</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label>Practice / Facility Name</label>
+              <input type="text" name="provider_practice" placeholder="Clinic or hospital name">
+            </div>
+            <div class="form-group">
+              <label>Provider Phone</label>
+              <input type="tel" name="provider_phone" placeholder="(248) 555-5678">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Provider Email</label>
+            <input type="email" name="provider_email" placeholder="provider@clinic.com">
+          </div>
+
+          <!-- ===== EQUIPMENT PREFERENCES ===== -->
+          <div class="form-section-title">
+            <i class="fa-solid fa-bicycle"></i> Equipment Preferences
+          </div>
+
+          <div class="form-group">
+            <label>Type of Equipment Interested In *</label>
+            <select name="equipment_type" required>
+              <option value="">Select</option>
+              <option>Adaptive Tricycle (foot-powered with support)</option>
+              <option>Hand Cycle (upper-body powered)</option>
+              <option>Tandem Bike (visual impairment / balance)</option>
+              <option>Custom Modified Standard Bike</option>
+              <option>Not sure — need recommendation</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Has the child tried adaptive cycling before?</label>
+            <select name="tried_adaptive_cycling">
+              <option value="">Select</option>
+              <option>Yes — owns/owned adaptive equipment</option>
+              <option>Yes — tried at a clinic or event</option>
+              <option>No — this would be their first time</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Goals for Cycling</label>
+            <textarea name="cycling_goals" placeholder="What do you hope cycling will provide for your child? (e.g. recreation, exercise, riding with siblings, building confidence, therapy supplement)" style="min-height:80px;"></textarea>
+          </div>
+
+          <!-- ===== FINANCIAL ===== -->
+          <div class="form-section-title">
+            <i class="fa-solid fa-hand-holding-heart"></i> Financial Information
+          </div>
+          <p class="form-note" style="margin-bottom:1rem;">Financial need is a factor but never a barrier. We use a sliding scale and work with every family.</p>
+
+          <div class="form-group">
+            <label>Do you need financial assistance? *</label>
+            <select name="financial_assistance" required>
+              <option value="">Select</option>
+              <option>Yes — full funding needed</option>
+              <option>Yes — partial assistance needed</option>
+              <option>No — I can self-fund but need equipment help</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Insurance Provider (optional)</label>
+            <input type="text" name="insurance_provider" placeholder="Insurance company name, if applicable">
+          </div>
+
+          <div class="form-group">
+            <label>Existing Funding Source or Grant (optional)</label>
+            <input type="text" name="existing_funding" placeholder="e.g. Medicaid waiver, grant, other organization">
+          </div>
+
+          <!-- ===== ADDITIONAL ===== -->
+          <div class="form-section-title">
+            <i class="fa-solid fa-circle-info"></i> Additional Information
+          </div>
+
+          <div class="form-group">
+            <label>How did you hear about Pedals of Hope?</label>
+            <select name="referral_source">
+              <option value="">Select</option>
+              <option>Therapist / Doctor referral</option>
+              <option>School or teacher</option>
+              <option>Another family</option>
+              <option>Social media</option>
+              <option>Web search</option>
+              <option>Community event</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Preferred Location *</label>
+            <select name="preferred_location" required>
+              <option value="">Select</option>
+              <option>Troy, MI Office</option>
+              <!-- TODO: Add second location option -->
+              <option>[Second Location]</option>
+              <option>No preference</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Additional Notes or Comments</label>
+            <textarea name="additional_notes" placeholder="Anything else you'd like us to know about your child or situation." style="min-height:80px;"></textarea>
+          </div>
+
+          <!-- Consent -->
+          <div style="background:var(--bg-alt); padding:1.2rem; border-radius:var(--radius); margin:1.5rem 0;">
+            <div class="checkbox-group">
+              <input type="checkbox" id="consent" name="consent" required>
+              <label for="consent">I confirm that the information provided is accurate and I authorize Pedals of Hope to contact the referring provider listed above. I understand that submitting this form does not guarantee approval and that a letter of medical necessity is required. *</label>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width:100%; text-align:center; font-size:1.1rem; padding:1rem;">
+            <i class="fa-solid fa-paper-plane"></i> Submit Application
+          </button>
+          <p style="text-align:center; margin-top:1rem; font-size:0.85rem; color:var(--text-light);">
+            🔒 Your information is sent securely and kept confidential.<br>
+            We'll reach out within 5–7 business days after receiving your application.
+          </p>
+        </form>
+      </div>
+
+      <!-- After form info -->
+      <div style="max-width:700px; margin:3rem auto 0; text-align:center;">
+        <h3 style="color:var(--primary-dark); margin-bottom:0.5rem;">What Happens Next?</h3>
+        <p style="color:var(--text-light);">After submitting your application, our team will review it and reach out to you. Please email your child's letter of medical necessity to <a href="mailto:referrals@pedalsofhope.org">referrals@pedalsofhope.org</a> — include your child's name in the subject line. Questions? Call us at <strong>(248) 707-0136</strong>.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-about">
+        <h4><i class="fa-solid fa-bicycle"></i> Pedals of Hope</h4>
+        <p>A 501(c)(3) non-profit dedicated to providing adaptive bikes and cycling equipment to children with disabilities, so every child can experience the freedom of riding.</p>
+      </div>
+      <div>
+        <h4>Programs</h4>
+        <a href="programs.html">Our Programs</a>
+        <a href="programs.html#eligibility">Eligibility</a>
+        <a href="intake.html">Apply Online</a>
+        <a href="programs.html#faq">FAQ</a>
+      </div>
+      <div>
+        <h4>Get Involved</h4>
+        <a href="donate.html">Donate</a>
+        <a href="contact.html">Volunteer</a>
+        <a href="contact.html">Partner With Us</a>
+      </div>
+      <div>
+        <h4>Connect</h4>
+        <a href="contact.html">Contact Us</a>
+        <a href="#">Facebook</a>
+        <a href="#">Instagram</a>
+      </div>
+    </div>
+    <div class="footer-newsletter">
+      <h4>Stay in the Loop</h4>
+      <p>Get updates on kids we've helped, upcoming events, and ways to get involved.</p>
+      <form class="newsletter-form" action="#" method="post">
+        <input type="email" placeholder="Your email address" required>
+        <button type="submit" class="btn btn-primary">Subscribe</button>
+      </form>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 Pedals of Hope. All rights reserved. EIN: 00-0000000
+    </div>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.section, .cta-banner').forEach(el => {
+      el.classList.add('animate-on-scroll'); observer.observe(el);
+    });
+  </script>
+</body>
+</html>

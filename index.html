@@ -21,8 +21,8 @@
         <a href="index.html" class="active">Home</a>
         <a href="about.html">About</a>
         <a href="programs.html">Programs</a>
-        <a href="stories.html">Stories</a>
         <a href="contact.html">Contact</a>
+        <a href="intake.html" class="btn-nav-secondary">Apply Online</a>
         <a href="donate.html" class="btn-nav">Donate</a>
       </div>
     </nav>
@@ -33,13 +33,10 @@
     <h1>Every Child Deserves to Ride</h1>
     <p>We connect children with disabilities to the specialized adaptive bikes and equipment they need to ride alongside their peers.</p>
     <div class="hero-buttons">
-      <a href="programs.html" class="btn btn-primary">Apply for a Bike</a>
+      <a href="intake.html" class="btn btn-primary">Apply for a Bike</a>
       <a href="donate.html" class="btn btn-outline">Make a Donation</a>
     </div>
-
   </section>
-
-
 
   <!-- Mission Summary -->
   <section class="section">
@@ -63,16 +60,16 @@
       <div class="card-grid">
         <div class="card">
           <div class="card-icon"><i class="fa-solid fa-clipboard-list"></i></div>
-          <h3>1. Apply</h3>
-          <p>Fill out our simple application with your child's needs and a letter from their therapist or doctor. We review every application personally.</p>
+          <h3>1. Apply Online</h3>
+          <p>Fill out our <a href="intake.html">online intake form</a> with your child's needs and information. We review every application personally.</p>
         </div>
         <div class="card">
-          <div class="card-icon"><i class="fa-solid fa-wrench"></i></div>
+          <div class="card-icon blue"><i class="fa-solid fa-wrench"></i></div>
           <h3>2. Get Matched</h3>
           <p>Our team works with certified adaptive equipment specialists to find the perfect bike or trike for your child's specific abilities and goals.</p>
         </div>
         <div class="card">
-          <div class="card-icon"><i class="fa-solid fa-bicycle"></i></div>
+          <div class="card-icon sky"><i class="fa-solid fa-bicycle"></i></div>
           <h3>3. Ride!</h3>
           <p>Your child receives their custom-fitted adaptive bike, fully funded or with significant financial assistance. Then the real fun begins.</p>
         </div>
@@ -80,21 +77,7 @@
     </div>
   </section>
 
-  <!-- Video Section -->
-  <section class="section">
-    <div class="container">
-      <div class="section-header">
-        <h2>See the Impact</h2>
-        <p>Watch what happens when a child rides for the first time</p>
-      </div>
-      <div class="video-placeholder">
-        <i class="fa-solid fa-play-circle"></i>
-        <p>Video coming soon</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Testimonial -->
+  <!-- Testimonials -->
   <section class="section">
     <div class="container">
       <div style="max-width:700px; margin:0 auto;">
@@ -110,7 +93,7 @@
     </div>
   </section>
 
-  <!-- What We Provide -->
+  <!-- Equipment We Fund -->
   <section class="section section-alt">
     <div class="container">
       <div class="section-header">
@@ -119,7 +102,7 @@
       </div>
       <div class="card-grid">
         <div class="card">
-          <div class="card-icon"><i class="fa-solid fa-wheelchair-move"></i></div>
+          <div class="card-icon blue"><i class="fa-solid fa-wheelchair-move"></i></div>
           <h3>Adaptive Tricycles</h3>
           <p>Hand-and-foot powered trikes with full trunk and lateral support for children who need extra stability.</p>
         </div>
@@ -128,9 +111,8 @@
           <h3>Hand Cycles</h3>
           <p>Upper-body powered cycles for children with limited or no leg function. Recumbent and upright options available.</p>
         </div>
-
         <div class="card">
-          <div class="card-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+          <div class="card-icon sky"><i class="fa-solid fa-screwdriver-wrench"></i></div>
           <h3>Custom Modifications</h3>
           <p>Specialized seating, harnesses, pedal adaptations, and steering modifications fitted to each child's needs.</p>
         </div>
@@ -144,7 +126,7 @@
     <p>Your donation directly funds adaptive bikes for children who need them most.</p>
     <div class="hero-buttons">
       <a href="donate.html" class="btn btn-primary">Donate Now</a>
-      <a href="programs.html" class="btn btn-outline">Apply for a Bike</a>
+      <a href="intake.html" class="btn btn-outline">Apply for a Bike</a>
     </div>
   </section>
 
@@ -157,8 +139,9 @@
       </div>
       <div>
         <h4>Programs</h4>
-        <a href="programs.html">Apply for a Bike</a>
+        <a href="programs.html">Our Programs</a>
         <a href="programs.html#eligibility">Eligibility</a>
+        <a href="intake.html">Apply Online</a>
         <a href="programs.html#faq">FAQ</a>
       </div>
       <div>
@@ -188,18 +171,13 @@
   </footer>
 
   <script>
-    // Scroll-triggered animations
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
+        if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
       });
     }, { threshold: 0.1 });
-    document.querySelectorAll('.section, .stats-bar, .cta-banner, .card, .testimonial, .press-bar, .tier, .step, .story-card, .impact-item, .event-item, .sponsor-tier').forEach(el => {
-      el.classList.add('animate-on-scroll');
-      observer.observe(el);
+    document.querySelectorAll('.section, .stats-bar, .cta-banner, .card, .testimonial').forEach(el => {
+      el.classList.add('animate-on-scroll'); observer.observe(el);
     });
   </script>
 </body>
